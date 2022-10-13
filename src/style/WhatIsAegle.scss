@@ -1,0 +1,511 @@
+@import "./Variables.scss";
+.__WhatIsAegle {
+  a {
+    text-decoration: none !important;
+  }
+  height: 100%;
+  min-height: 40vh;
+  padding: 0;
+  padding: 5rem $content-outer-gap-desktop 0 $content-outer-gap-desktop !important;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $navbar-background;
+
+  h1 {
+    font-family: "Rufina", sans-serif !important;
+    color: $navbar-primary !important;
+    font-size: 2.6rem;
+  }
+  h3 {
+    font-family: Lato !important;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.2rem;
+  }
+  .mainWrapper {
+    height: 70vh;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    .lower {
+      width: 100%;
+
+      .wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        .left {
+          max-width: 40%;
+          .leftWrapper {
+            .heading {
+              font-family: "Rufina", sans-serif !important;
+              color: $navbar-primary !important;
+            }
+            .subheading {
+              font-family: "Rufina", sans-serif !important;
+              color: $navbar-accent !important;
+            }
+            .button {
+              margin-top: 3rem;
+              border: 2px solid $navbar-accent !important;
+              background-color: $navbar-accent !important;
+              color: $navbar-primary !important;
+              transition: 0.5s;
+              border-radius: 39px;
+              padding: 0.6rem 2rem;
+              &:hover,
+              &:focus {
+                border: 2px solid $navbar-accent !important;
+                background-color: transparent !important;
+                color: $navbar-accent !important;
+                transition: 0.5s;
+              }
+            }
+            .button.empty {
+              margin-left: 1rem;
+              border: 2px solid transparent !important;
+              background-color: transparent !important;
+              color: $navbar-primary !important;
+              &:hover,
+              &:focus {
+                border: 2px solid $navbar-accent !important;
+                color: $navbar-accent !important;
+              }
+            }
+          }
+        }
+
+        .right {
+          max-width: 50%;
+          border-radius: 10px;
+          padding: 0 !important;
+          margin: 0 !important;
+          img {
+            width: 40rem;
+          }
+        }
+      }
+    }
+
+    .saving-chart-content {
+      width: 90%;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .title {
+      font-size: 1.9rem !important;
+    }
+    .subtitle {
+      font-size: 1.2rem !important;
+    }
+    margin: 0 $content-outer-gap-mobile !important;
+    .mainWrapper {
+      .lower {
+        padding: 2rem;
+        .wrapper > div {
+          margin: 1rem 0;
+        }
+        .wrapper {
+          flex-direction: column-reverse;
+          .leftWrapper {
+            display: flex !important;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+          }
+          .heading {
+            font-size: 1.5rem;
+          }
+          .subheading {
+            font-size: 1rem !important;
+          }
+          .right {
+            width: 5rem;
+            height: 5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.__What__WhatIsAegle {
+  background-color: $home-background;
+  height: 100%;
+  min-height: 90vh;
+  padding: 0;
+  padding: 0 $content-outer-gap-desktop !important;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .wrapperMain {
+    transform: translateY(-5vh);
+    width: 100% !important;
+    background-color: $navbar-primary;
+    box-shadow: 0px 4px 30px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    .subtitle {
+      width: 100%;
+      text-align: center;
+      font-size: 1.5rem !important;
+      padding: 1.5rem 0;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      font-family: Rufina !important;
+      color: $navbar-background !important;
+      margin: 5rem auto 2rem auto !important;
+      max-width: 35%;
+    }
+    .wrapperDisplay {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      .wrapperDrawer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 95%;
+        margin: 1rem 0rem;
+        .item {
+          cursor: pointer;
+          background: $navbar-primary;
+          border: 4px solid #e8e8e8;
+          border-radius: 10px;
+          width: 31%;
+          padding: 2rem;
+          transition: 0.5s;
+          img {
+            width: 3rem;
+            margin-bottom: 2rem;
+          }
+          h3 {
+            font-family: Lato !important;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 1.3rem;
+            color: $navbar-background !important;
+            max-width: 70%;
+            transition: 0.5s;
+          }
+          p {
+            font-family: Lato !important;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1rem;
+            color: $navbar-dark-text !important;
+            transition: 0.5s;
+          }
+          &:hover,
+          &:focus,
+          &.active {
+            background: $navbar-background !important;
+            box-shadow: 0px 10px 20px 10px rgba(0, 0, 0, 0.15);
+            transition: 0.5s;
+            border: 4px solid $navbar-background;
+            h3 {
+              color: $navbar-primary !important;
+              transition: 0.5s;
+            }
+            p {
+              color: $navbar-light-text !important;
+              transition: 0.5s;
+            }
+          }
+        }
+      }
+      hr {
+        width: 70%;
+      }
+      .wrapperContent {
+        width: 70%;
+        margin: 2rem 0rem;
+        .item {
+          display: none;
+          &.active {
+            display: block !important;
+          }
+          .chunk {
+            margin-bottom: 4rem;
+            h3 {
+              font-family: Lato !important;
+              font-style: normal;
+              font-weight: 600;
+              font-size: 1.3rem;
+              color: $navbar-background !important;
+              max-width: 70%;
+              transition: 0.5s;
+              margin-bottom: 1rem;
+            }
+            p {
+              font-family: Lato !important;
+              font-style: normal;
+              font-weight: normal;
+              font-size: 1rem;
+              color: $navbar-dark-text !important;
+              transition: 0.5s;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .title {
+      font-size: 1.9rem !important;
+    }
+    .subtitle {
+      font-size: 1.2rem !important;
+    }
+    margin: 0 $content-outer-gap-mobile !important;
+    .wrapperDisplay {
+      flex-direction: column;
+      .accordion-item {
+        margin: 1rem !important;
+      }
+    }
+  }
+}
+
+// My Css Start
+.hsContainer {
+  background-color: $home-background;
+  width: 100%;
+
+  .row > * {
+    padding-right: 0px;
+  }
+
+  .hsMainRow {
+    background-color: $navbar-primary;
+    height: 60vh;
+    border-radius: 10px;
+    padding: 70px 80px;
+
+    .hsRightContent h1 {
+      color: $navbar-background;
+      font-family: "Rufina", sans-serif !important;
+      font-size: 32px;
+      font-weight: 500;
+    }
+  }
+
+  .hsRightContent p {
+    width: 70%;
+    color: gray;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .hsBtnTryIt {
+    background-color: $navbar-background;
+    color: $navbar-primary;
+    padding: 20px 40px;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 50px;
+    margin-left: 7vw;
+  }
+}
+
+.hsTable {
+  border: 3px solid $navbar-background;
+  background-color: $navbar-background;
+  border-radius: 8px;
+
+  .hsLefttable {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hsLefttable h6 {
+    font-size: 19px;
+    font-weight: 400;
+  }
+
+  .tableColumn {
+    background-color: $navbar-primary;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px 0px 0px 5px;
+    z-index: 1;
+  }
+
+  .tableColumn h6 {
+    color: $navbar-background;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .hsRihttabl {
+    background-color: $navbar-primary;
+    border-radius: 5px;
+    padding: 40px 0px;
+
+    .rightTbalePara {
+      color: gray;
+      font-family: Lato !important;
+      font-size: 17px;
+      font-weight: 500;
+    }
+
+    .rightTableData {
+      background-color: #fff;
+      box-shadow: 0px 4px 30px 10px rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+      height: 90px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 90%;
+
+      .RightTableDataItem a {
+        background-color: #d2e9f3;
+        color: $navbar-background;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: Lato !important;
+        padding: 7px 15px;
+        border-radius: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .__What__WhatIsAegle {
+    .wrapperMain {
+      .subtitle {
+        font-size: 22px !important;
+      }
+    }
+  }
+  .hsBtnTryIt {
+    padding: 18px 36px !important;
+    font-weight: 500;
+    font-size: 15px !important;
+    border-radius: 50px;
+    margin-left: 3vw !important;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .__What__WhatIsAegle {
+    .wrapperMain {
+      .subtitle {
+        font-size: 20px !important;
+      }
+    }
+  }
+  .hsBtnTryIt {
+    padding: 11px 22px !important;
+    font-weight: 500;
+    font-size: 14px !important;
+    border-radius: 50px;
+    margin-left: 4vw !important;
+  }
+}
+
+@media screen and(max-width: 1280px) {
+  .__What__WhatIsAegle {
+    .wrapperMain {
+      .subtitle {
+        font-size: 18px !important;
+      }
+    }
+  }
+  .hsContainer {
+    .hsMainRow {
+      background-color: $navbar-primary;
+      height: 65vh;
+      border-radius: 10px;
+      padding: 70px 80px;
+
+      .hsRightContent h1 {
+        font-size: 22px;
+      }
+      .hsRightContent p {
+        font-size: 14px;
+      }
+    }
+  }
+  .hsBtnTryIt {
+    padding: 11px 22px !important;
+    font-weight: 500;
+    font-size: 14px !important;
+    border-radius: 50px;
+    margin-left: 3vw !important;
+  }
+}
+
+@media screen and(max-width: 1220px) {
+  .hsBtnTryIt {
+    padding: 10px 20px !important;
+    font-weight: 500;
+    font-size: 14px !important;
+    border-radius: 50px;
+    margin-left: 3vw !important;
+  }
+}
+
+@media screen and(max-width: 1100px) {
+  .hsBtnTryIt {
+    padding: 10px 20px !important;
+    font-weight: 500;
+    font-size: 14px !important;
+    border-radius: 50px;
+    margin-left: 2vw !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .__What__WhatIsAegle {
+    .wrapperMain {
+      .subtitle {
+        font-size: 15px !important;
+      }
+    }
+  }
+  .hsBtnTryIt {
+    padding: 10px 20px !important;
+    font-weight: 500;
+    font-size: 14px !important;
+    border-radius: 50px;
+    margin-left: 0vw !important;
+  }
+  .hsLefttable {
+    h6 {
+      font-size: 14px !important;
+    }
+  }
+  .RightTableDataItem {
+    a {
+      font-size: 12px !important;
+    }
+  }
+  .rightTbalePara {
+    font-size: 12px !important;
+  }
+  .rightTableData {
+    width: 80% !important;
+  }
+}
+
+// My Css end
